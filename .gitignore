@@ -2,6 +2,7 @@
 
 # vscode configuration
 .vscode/settings.json
+.vscode/
 
 # testing
 /coverage
