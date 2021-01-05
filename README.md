@@ -1,25 +1,30 @@
-﻿This project was created using [Microsoft Web Template Studio](https://github.com/Microsoft/WebTemplateStudio).
+## Shopify Summer Internship Backend Challenge 2021
 
-## Getting Started
+[Challenge Details](https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_CkZPR8bjak/edit)
 
-The best way to launch the application is using the [Visual Studio Code Tasks](https://code.visualstudio.com/docs/editor/tasks). In the `vscode/tasks.json` file you can find all the tasks configured for this project.
+## Technologies 
+- NodeJS
+- MongoDB
+- React
 
-To launch a task click on the menu `Terminal > Run Task` and select the task to launch (or press `Ctrl+Shift+P` and choose the `Tasks:Run Task` command).
-
-To run the project:
-
-1. Install dependencies using `Install dependencies` task.
-2. Start development app using `Start App` task.
+## Libraries
+- Express
+- Passport
+- JWT
+- bCrypt
+- Multer
+- Mongoose
+- Bootstrap
 
 ## File Structure
 ```
 .
-├── .vscode/ - Visual Studio Code configuration files
 ├── backend/ - Backend App
+| ├── config/ - Passport.js configuration and constants for the endpoints and port 
+| ├── models/ - Model schemas for MongoDB
 │ ├── routes/ - Handles API calls for routes
 │ ├── scripts/ - scripts to publish
 │ ├── app.js - Adds middleware to the express server
-│ ├── constants.js - Defines the constants for the endpoints and port
 │ └── server.js - Configures Port and HTTP Server
 ├── frontend/ - Frontend App
 │ ├── public/ - public static files
@@ -31,7 +36,9 @@ To run the project:
 └── README.md
 ```
 
-### Frontend
+## Deployment
+
+#### Frontend
 
 The frontend is based on [create-react-app](https://github.com/facebook/create-react-app).
 
@@ -46,7 +53,7 @@ To start the frontend application manually:
   2. Use `yarn install` or `npm install` to install frontend dependencies.
   3. Use `yarn start` or `npm start` to start frontend app in development.
 
-### Backend
+#### Backend
 
 The backend is based on [Express Generator](https://expressjs.com/en/starter/generator.html).
 
@@ -59,13 +66,28 @@ To start the backend application manually:
   2. Use `yarn install` or `npm install` to install backend dependencies.
   3. Use `yarn start` or `npm start` to start backend app in development.
 
-## Deployment
 
-To deploy the application in an Azure App Service follow the deployment instructions:
+## Features
+- Validation on all API routes using Passport and JWT
+- Secure registration and login/logout
+- Upload multiple files (max 10) at one time with private or public visibility
+- Validation of file extension/types 
+- View all public files
+- Download public files
+- Delete files only belonging to user
 
-- [Deployment using Web Template Studio Deploy command](https://github.com/microsoft/WebTemplateStudio/blob/dev/docs/generated-apps/deployment.md)
 
-Consider adding authentication and securing backend API's by following [Azure App Service Security](https://docs.microsoft.com/en-us/azure/app-service/overview-security).
+## Design Choices
+- Store images on MongoDB with the filename, author and reference to the author object in the entry
+- Use JWT session tokens to authenticate requests made to server
+
+
+## To-Do
+- Make frontend more user friendly 
+- Add option to change visibility of an uploaded image
+- Implement security measures for information stored in database (hashing image data, user data)
+
+
 
 ## Additional Documentation
 
