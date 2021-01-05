@@ -58,7 +58,7 @@ To start the frontend application manually:
 The backend is based on [Express Generator](https://expressjs.com/en/starter/generator.html).
 
 The most important scripts in the `package.json` are:
-  - start: serves the backend in development on http://localhost:3001/.
+  - start: serves the backend in development on http://localhost:5000/.
   - publish: copies the backend files to the `publish` folder.
 
 To start the backend application manually:
