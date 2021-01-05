@@ -69,7 +69,7 @@ To start the backend application manually:
 
 ## Features
 - Validation on all API routes using Passport and JWT
-- Secure registration and login/logout
+- Secure registration and login/logout with password hashing
 - Upload multiple files (max 10) at one time with private or public visibility
 - Validation of file extension/types 
 - View all public files
